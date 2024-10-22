@@ -1,0 +1,11 @@
+const appName = "AgriGenesis";
+const login = "Login";
+const signup = "Sign Up";
+const mobileNumber = "Enter your mobile number";
+const name = "Name:";
+const email = "Email Address:";
+const password = "New Password:";
+const loginPassword = "Password:";
+const enterName = "Enter your name..";
+const enterEmail = "Enter a email address..";
+const enterPassword = "Enter a password..";
