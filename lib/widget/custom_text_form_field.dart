@@ -25,34 +25,41 @@ class _CustomTextFormFieldWidgetState extends State<CustomTextFormFieldWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: widget.controller,
-      obscureText: widget.password == true ? !passwordVisible : false,
-      decoration: InputDecoration(
-          hintText: widget.hintText,
-          contentPadding: const EdgeInsets.all(10),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: greyColor),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: greyColor),
-          ),
-          filled: true,
-          fillColor: Colors.white,
-          suffixIcon: widget.password == true
-              ? IconButton(
-                  onPressed: () {
-                    setState(() {
-                      passwordVisible = !passwordVisible;
-                    });
-                  },
-                  icon: !passwordVisible
-                      ? const Icon(Icons.visibility_off)
-                      : const Icon(Icons.visibility))
-              : null),
-      validator: widget.validator,
+    return Padding(
+      padding: const EdgeInsets.only(left: 20),
+      child: SizedBox(
+        width: 275,
+        height: 40,
+        child: TextFormField(
+          controller: widget.controller,
+          obscureText: widget.password == true ? !passwordVisible : false,
+          decoration: InputDecoration(
+              hintText: widget.hintText,
+              contentPadding: const EdgeInsets.all(10),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(color: greyColor),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(color: greyColor),
+              ),
+              filled: true,
+              fillColor: Colors.white,
+              suffixIcon: widget.password == true
+                  ? IconButton(
+                      onPressed: () {
+                        setState(() {
+                          passwordVisible = !passwordVisible;
+                        });
+                      },
+                      icon: !passwordVisible
+                          ? const Icon(Icons.visibility_off)
+                          : const Icon(Icons.visibility))
+                  : null),
+          validator: widget.validator,
+        ),
+      ),
     );
   }
 }
