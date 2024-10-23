@@ -1,5 +1,6 @@
 import 'package:agri_genesis/constant/color.dart';
-import 'package:agri_genesis/view/authentication/register_screen.dart';
+import 'package:agri_genesis/view/authentication/language_screen.dart';
+import 'package:agri_genesis/view/authentication/mobile_number_screen.dart';
 import 'package:agri_genesis/view/main/main_screen.dart';
 import 'package:agri_genesis/widget/custom_elevated_button.dart';
 import 'package:agri_genesis/widget/custom_text.dart';
@@ -33,7 +34,7 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: CustomTextButtonWidget(
                     onPressed: () {
-                      Get.to(const RegisterScreen());
+                      Get.to(const MobileNumberScreen());
                     },
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -41,13 +42,13 @@ class LoginScreen extends StatelessWidget {
                         CustomTextWidget(
                           text: "Don’t have an account?",
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
+                          fontSize: 18,
                           fontColor: Colors.white,
                         ),
                         CustomTextWidget(
                           text: " Sign Up",
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
+                          fontSize: 18,
                           fontColor: Colors.black,
                         ),
                       ],
@@ -74,7 +75,7 @@ class LoginScreen extends StatelessWidget {
             child: CustomTextWidget(
               text: login,
               fontColor: Colors.white,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -84,7 +85,7 @@ class LoginScreen extends StatelessWidget {
           const CustomTextWidget(
             text: email,
             fontColor: Colors.white,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
           const SizedBox(
@@ -98,7 +99,7 @@ class LoginScreen extends StatelessWidget {
           const CustomTextWidget(
             text: loginPassword,
             fontColor: Colors.white,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
           const SizedBox(
@@ -128,7 +129,7 @@ class LoginScreen extends StatelessWidget {
           Center(
             child: CustomElevatedButtonWidget(
                 onPressed: () {
-                  Get.to(const MainScreen());
+                  Get.to(const LanguageScreen());
                 },
                 fixedSize: const Size(230, 50),
                 buttonColor: Colors.black,

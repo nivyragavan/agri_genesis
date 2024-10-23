@@ -42,13 +42,13 @@ class RegisterScreen extends StatelessWidget {
                         CustomTextWidget(
                           text: "You have an account?",
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
+                          fontSize: 18,
                           fontColor: Colors.white,
                         ),
                         CustomTextWidget(
                           text: " Login",
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
+                          fontSize: 18,
                           fontColor: Colors.black,
                         ),
                       ],
@@ -75,7 +75,7 @@ class RegisterScreen extends StatelessWidget {
             child: CustomTextWidget(
               text: signup,
               fontColor: Colors.white,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -85,7 +85,7 @@ class RegisterScreen extends StatelessWidget {
           const CustomTextWidget(
             text: name,
             fontColor: Colors.white,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
           const SizedBox(
@@ -99,7 +99,7 @@ class RegisterScreen extends StatelessWidget {
           const CustomTextWidget(
             text: email,
             fontColor: Colors.white,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
           const SizedBox(
@@ -113,7 +113,7 @@ class RegisterScreen extends StatelessWidget {
           const CustomTextWidget(
             text: password,
             fontColor: Colors.white,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
           const SizedBox(
