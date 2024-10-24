@@ -1,4 +1,6 @@
 import 'package:agri_genesis/constant/string.dart';
+import 'package:agri_genesis/view/account/expense_calculator_screen.dart';
+import 'package:agri_genesis/view/account/livestock_sreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +15,7 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
-        iconTheme: const IconThemeData(color: Colors.white),
+        automaticallyImplyLeading: false,
         title: const CustomTextWidget(
           text: myAccount,
           fontColor: Colors.white,
@@ -51,7 +53,10 @@ class AccountScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            buildExpenseCalculator()
+            buildExpenseCalculator(),
+            const SizedBox(
+              height: 15,
+            ),
           ],
         ),
       ),
@@ -224,7 +229,9 @@ class AccountScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontColor: Colors.black,
                       ),
-                      SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Icon(
                         Icons.edit,
                         size: 20,
@@ -234,7 +241,9 @@ class AccountScreen extends StatelessWidget {
                 ),
               ],
             ),
-           const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 const Icon(Icons.motorcycle),
@@ -252,20 +261,33 @@ class AccountScreen extends StatelessWidget {
                   width: 70,
                   height: 25,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.white
-                  ),
-                  child: const Center( child: CustomTextWidget(text: "Owner", fontSize: 12, fontWeight: FontWeight.w500,)),
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.white),
+                  child: const Center(
+                      child: CustomTextWidget(
+                    text: "Owner",
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  )),
                 ),
                 const SizedBox(
                   width: 10,
                 ),
-                const Icon(Icons.arrow_forward_ios_rounded, size: 18,)
+                const Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  size: 18,
+                )
               ],
             ),
-            const SizedBox(height: 10,),
-            const Divider(color: Colors.black,),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
+            const Divider(
+              color: Colors.black,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             Center(
               child: GestureDetector(
                 onTap: () {},
@@ -294,13 +316,15 @@ class AccountScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-                const CustomTextWidget(
-                  text: myLiveStock,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  fontColor: Colors.black,
-                ),
-            const SizedBox(height: 10,),
+            const CustomTextWidget(
+              text: myLiveStock,
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              fontColor: Colors.black,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 Image.asset("assets/images/cow.png"),
@@ -312,7 +336,7 @@ class AccountScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const CustomTextWidget(
-                      text: noLiveStock,
+                      text: noLiveStockAdded,
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                       fontColor: Colors.black,
@@ -322,7 +346,7 @@ class AccountScreen extends StatelessWidget {
                     ),
                     SizedBox(
                       width: Get.width * 0.55,
-                      child:const CustomTextWidget(
+                      child: const CustomTextWidget(
                         text: tapToAddLivestock,
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
@@ -333,10 +357,14 @@ class AccountScreen extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             Center(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.to(const LivestockScreen());
+                },
                 child: const CustomTextWidget(
                   text: addYourLiveStock,
                   fontSize: 15,
@@ -368,7 +396,9 @@ class AccountScreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
               fontColor: Colors.black,
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 Image.asset("assets/images/calculator.png"),
@@ -390,7 +420,7 @@ class AccountScreen extends StatelessWidget {
                     ),
                     SizedBox(
                       width: Get.width * 0.55,
-                      child:const CustomTextWidget(
+                      child: const CustomTextWidget(
                         text: expenseDescription,
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
@@ -401,10 +431,14 @@ class AccountScreen extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             Center(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.to(const ExpenseCalculatorScreen());
+                },
                 child: const CustomTextWidget(
                   text: calculateExpense,
                   fontSize: 15,
