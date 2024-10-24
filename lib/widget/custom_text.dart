@@ -8,6 +8,7 @@ class CustomTextWidget extends StatelessWidget {
   final String? fontFamily;
   final TextAlign? textAlign;
   final FontStyle? fontStyle;
+  final TextOverflow? textOverflow;
   const CustomTextWidget(
       {super.key,
       required this.text,
@@ -16,7 +17,7 @@ class CustomTextWidget extends StatelessWidget {
       this.fontWeight,
       this.fontFamily,
       this.textAlign,
-      this.fontStyle});
+      this.fontStyle, this.textOverflow});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,7 @@ class CustomTextWidget extends StatelessWidget {
           color: fontColor,
           fontSize: fontSize,
           fontWeight: fontWeight,
+          overflow: textOverflow,
           fontFamily: fontFamily ?? "Inter",
           fontStyle: fontStyle),
     );
